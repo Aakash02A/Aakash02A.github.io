@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Aakash - Computer Science Student">
+    <title>Aakash - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#home" class="logo">Editing file</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Introduction -->
+    <header id="home" class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="header-name">Aakash</h1>
+                <p class="header-role">AI & Data Science Student | Full Stack Learner | Defensive Security Enthusiast
+                </p>
+                <p class="header-tagline">I focus on building practical projects to understand how software systems,
+                    networks, and security work in the real world.</p>
+                <div class="header-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="resume.pdf" class="btn btn-outline" download>Download Resume</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/aakash02a" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/aakash02a" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:aakashvkl4@email.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am currently pursuing a degree in Computer Science with a specialization in AI & Data Science.
+                        My learning focus is on full stack development, networking fundamentals, operating systems, and
+                        security concepts.</p>
+                    <p>I actively work on hands-on projects to strengthen my understanding of backend logic, databases,
+                        APIs, and system behavior. Alongside development, I explore defensive security concepts such as
+                        traffic monitoring, logging, and basic firewall mechanisms.</p>
+                    <p>My goal is to build a strong foundation in core computer science and engineering principles
+                        before specializing further.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>Learning</h3>
+                        <p>Full Stack Development</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Building</h3>
+                        <p>Practical Projects</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Exploring</h3>
+                        <p>Security Concepts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+
+            <div class="skills-grid">
+                <!-- Technical Skills -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">Bash</span>
+                        <span class="skill-item">SQL</span>
+                        <span class="skill-item">JavaScript (basic)</span>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-item">HTML5</span>
+                        <span class="skill-item">CSS3</span>
+                        <span class="skill-item">JavaScript (DOM, Fetch API)</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">PostgreSQL</span>
+                        <span class="skill-item">MongoDB (basic)</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools & Platforms</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-item">Git & GitHub</span>
+                        <span class="skill-item">Linux fundamentals</span>
+                        <span class="skill-item">VS Code</span>
+                        <span class="skill-item">Command Line</span>
+                    </div>
+                </div>
+
+                <!-- CS Fundamentals -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <h3>Computer Science Fundamentals</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-item">Data Structures & Algorithms</span>
+                        <span class="skill-item">Operating Systems basics</span>
+                        <span class="skill-item">Networking basics</span>
+                        <span class="skill-item">OOP concepts</span>
+                    </div>
+                </div>
+
+                <!-- Security Interest -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Security Interest Areas</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-item">Defensive security fundamentals</span>
+                        <span class="skill-item">Traffic filtering concepts</span>
+                        <span class="skill-item">Logging & monitoring basics</span>
+                        <span class="skill-item">Network fundamentals</span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Soft Skills</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-item">Problem Solving</span>
+                        <span class="skill-item">Team Collaboration</span>
+                        <span class="skill-item">Time Management</span>
+                        <span class="skill-item">Critical Thinking</span>
+                        <span class="skill-item">Adaptability</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">ScienceLab Inventory Management System</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/Aakash02A/ScienceLab-Inventory-Management-System"
+                                target="_blank" rel="noopener" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://github.com/Aakash02A" target="_blank" rel="noopener"
+                                aria-label="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-problem">Developed an inventory management system for science lab equipment
+                        tracking. Helps manage stock levels, equipment details, and resource allocation for laboratory
+                        operations.</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>Database</span>
+                        <span>CRUD Operations</span>
+                    </div>
+                    <p class="project-outcome"><strong>Outcome:</strong> Implemented shopping cart, user authentication,
+                        and payment integration. Achieved 95% test coverage.</p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">E-Commerce Customer Segmentation Dashboard</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/Aakash02A/E-Commerce-Customer-Segmentation-Dashboard"
+                                target="_blank" rel="noopener" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://github.com/Aakash02A" target="_blank" rel="noopener"
+                                aria-label="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-problem">Built a data analytics dashboard to segment e-commerce customers based on
+                        purchasing behavior. Visualizes customer patterns to help understand different user groups.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Data Analysis</span>
+                        <span>Visualization</span>
+                    </div>
+                    <p class="project-outcome"><strong>Outcome:</strong> Reduced task completion time by 30% through
+                        automated reminders and priority sorting algorithms.</p>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Cryptography Algorithm</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/Aakash02A/Cryptography-Algorithm" target="_blank" rel="noopener"
+                                aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://github.com/Aakash02A" target="_blank" rel="noopener"
+                                aria-label="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-problem">Implemented various cryptography algorithms to understand encryption and
+                        decryption mechanisms. Focuses on fundamental security concepts and cipher techniques.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Cryptography</span>
+                        <span>Security</span>
+                    </div>
+                    <p class="project-outcome"><strong>Outcome:</strong> Integrated multiple APIs for accurate data. App
+                        used by 500+ users with 4.7/5 rating.</p>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Parking Management System</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/Aakash02A/Parking-Management-System" target="_blank"
+                                rel="noopener" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-problem">Created a system to manage parking lot operations including vehicle
+                        entry/exit tracking, slot availability, and fee calculation for efficient parking management.
+                    </p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>System Design</span>
+                        <span>Logic Building</span>
+                    </div>
+                    <p class="project-outcome"><strong>Outcome:</strong> Processed 10K+ data points daily. Improved
+                        decision-making speed by visualizing key metrics.</p>
+                </div>
+
+                <!-- Project 5 -->
+
+                <!-- Project 6 -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+
+            <div class="timeline">
+                <!-- Experience Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">May 2025 - Aug 2025</span>
+                        <h3>Software Engineering Intern</h3>
+                        <h4>TechCorp Solutions</h4>
+                        <ul>
+                            <li>Developed and deployed 3 new features for customer-facing web application using React
+                                and Node.js, improving user engagement by 25%</li>
+                            <li>Collaborated with cross-functional team of 8 developers to implement RESTful API
+                                endpoints serving 50K+ daily requests</li>
+                            <li>Optimized database queries reducing page load time by 40% and improving overall
+                                application performance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jan 2025 - Apr 2025</span>
+                        <h3>Web Development Intern</h3>
+                        <h4>StartUp Innovations Inc.</h4>
+                        <ul>
+                            <li>Built responsive landing pages and marketing website using HTML, CSS, and JavaScript,
+                                increasing mobile traffic by 35%</li>
+                            <li>Integrated third-party APIs for payment processing and email automation, streamlining
+                                business operations</li>
+                            <li>Conducted code reviews and wrote comprehensive documentation for new features</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Sep 2024 - Dec 2024</span>
+                        <h3>Freelance Web Developer</h3>
+                        <h4>Self-Employed</h4>
+                        <ul>
+                            <li>Designed and developed custom websites for 5 small businesses, delivering projects on
+                                time and within budget</li>
+                            <li>Implemented SEO best practices resulting in 60% increase in organic search traffic for
+                                clients</li>
+                            <li>Provided ongoing maintenance and technical support, ensuring 99.9% uptime</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jun 2024 - Aug 2024</span>
+                        <h3>Teaching Assistant - Data Structures</h3>
+                        <h4>Tech University</h4>
+                        <ul>
+                            <li>Assisted professor in teaching Data Structures course to 120+ students, conducting
+                                weekly office hours and lab sessions</li>
+                            <li>Graded assignments and provided constructive feedback on coding projects, improving
+                                student understanding</li>
+                            <li>Developed supplementary learning materials and tutorial videos on complex algorithm
+                                topics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Achievements Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="education-wrapper">
+                <!-- Education -->
+                <div class="education-section">
+                    <h2 class="section-title">Education</h2>
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>Bachelor of Science in Computer Science</h3>
+                            <h4>Tech University</h4>
+                            <p class="education-date">Expected Graduation: May 2027</p>
+                            <p class="education-gpa"><strong>GPA:</strong> 7.8/10</p>
+                        </div>
+                    </div>
+
+                    <h3 class="subsection-title">Certifications</h3>
+                    <div class="certifications-list">
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <strong>Ethical Hacking</strong>
+                                <span>NPTEL - 2025</span>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <strong>Full Stack Web Development</strong>
+                                <span>freeCodeCamp - 2024</span>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <strong>JavaScript Algorithms & Data Structures</strong>
+                                <span>freeCodeCamp - 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div class="achievements-section">
+                    <h2 class="section-title">Achievements & Awards</h2>
+                    <div class="achievements-list">
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>1st Place - University Hackathon</h4>
+                                <p>Led team of 4 to build AI-powered study assistant. Competed against 50+ teams.</p>
+                                <span class="achievement-date">November 2025</span>
+                            </div>
+                        </div>
+
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Dean's List</h4>
+                                <p>Achieved Dean's List recognition for 4 consecutive semesters for academic excellence.
+                                </p>
+                                <span class="achievement-date">2024-2025</span>
+                            </div>
+                        </div>
+
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Google Code Jam Qualifier</h4>
+                                <p>Qualified for Round 2 out of 30,000+ participants worldwide in competitive
+                                    programming.</p>
+                                <span class="achievement-date">April 2025</span>
+                            </div>
+                        </div>
+
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Open Source Contributor</h4>
+                                <p>Contributed to 5+ open source projects with 20+ merged pull requests on GitHub.</p>
+                                <span class="achievement-date">2024-Present</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-subtitle">Feel free to reach out if you'd like to discuss projects, technology, or opportunities and I'm currently seeking summer 2026 internship opportunities.<br> Let's connect!</p>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:aakashvkl4@email.com">aakashvkl4@email.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+9442689804">+91 9442689804</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Tiruppur,TamilNadu,India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <div>
+                            <h4>Resume</h4>
+                            <a href="resume.pdf" download>Download PDF</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <h4>Connect with me</h4>
+                        <div class="social-icons">
+                            <a href="https://github.com/aakash02a" target="_blank" rel="noopener" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/aakash02a" target="_blank" rel="noopener"
+                                aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://twitter.com/aakash02a" target="_blank" rel="noopener" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://leetcode.com/aakash02a" target="_blank" rel="noopener"
+                                aria-label="LeetCode">
+                                <i class="fas fa-code"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Aakash. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
