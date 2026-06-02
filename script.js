@@ -128,10 +128,11 @@ function initContactForm() {
         event.preventDefault();
 
         const submitButton = contactForm.querySelector('button[type="submit"]');
+        const subjectEl = document.getElementById("subject");
         const formData = {
             name: document.getElementById("name").value.trim(),
             email: document.getElementById("email").value.trim(),
-            subject: document.getElementById("subject").value.trim(),
+            subject: subjectEl ? subjectEl.value.trim() : "",
             message: document.getElementById("message").value.trim()
         };
 
@@ -140,17 +141,56 @@ function initContactForm() {
             return;
         }
 
+        const statusEl = document.getElementById("contactStatus");
+
         if (submitButton) {
             submitButton.disabled = true;
         }
 
+        const endpoint = (contactForm.dataset.endpoint || "").trim();
+
+        if (endpoint) {
+            // Send via provided endpoint (e.g., Formspree). Expect JSON response or 2xx status.
+            fetch(endpoint, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            })
+                .then((res) => {
+                    if (res.ok) {
+                        const successMsg = "Message sent — thank you!";
+                        showNotification(successMsg, "success");
+                        if (statusEl) statusEl.textContent = successMsg;
+                        contactForm.reset();
+                    } else {
+                        const errMsg = "Failed to send message. Please try again.";
+                        showNotification(errMsg, "error");
+                        if (statusEl) statusEl.textContent = errMsg;
+                    }
+                })
+                .catch((err) => {
+                    console.error(err);
+                    const netMsg = "Network error. Please try again later.";
+                    showNotification(netMsg, "error");
+                    if (statusEl) statusEl.textContent = netMsg;
+                })
+                .finally(() => {
+                    if (submitButton) submitButton.disabled = false;
+                });
+
+            return;
+        }
+
+        // Fallback: open user's email client with prefilled content
         const subject = encodeURIComponent(`${formData.subject} - Portfolio inquiry from ${formData.name}`);
         const body = encodeURIComponent(
             `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
         );
 
         window.location.href = `mailto:aakashvkl4@email.com?subject=${subject}&body=${body}`;
-        showNotification("Opening your email app with the message ready.", "success");
+        const openingMsg = "Opening your email app with the message ready.";
+        showNotification(openingMsg, "success");
+        if (statusEl) statusEl.textContent = openingMsg;
 
         window.setTimeout(() => {
             if (submitButton) {
@@ -163,10 +203,13 @@ function initContactForm() {
 function validateForm(data) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+    // Subject is optional; if present it must be at least 3 chars.
+    const subjectOk = data.subject.length === 0 || data.subject.length >= 3;
+
     return (
         data.name.length >= 2 &&
         emailRegex.test(data.email) &&
-        data.subject.length >= 3 &&
+        subjectOk &&
         data.message.length >= 10
     );
 }

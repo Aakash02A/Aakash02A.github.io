@@ -119,7 +119,6 @@
                             <span class="skill-item">Python</span>
                             <span class="skill-item">Bash</span>
                             <span class="skill-item">SQL</span>
-                            <span class="skill-item">JavaScript (basic)</span>
                         </div>
                     </div>
 
@@ -133,7 +132,7 @@
                             <span class="skill-item">Network Security</span>
                             <span class="skill-item">Traffic filtering </span>
                             <span class="skill-item">Logging & monitoring basics</span>
-                            <span class="skill-item">OWASP Top 10</span>
+                            <span class="skill-item">OWASP Fundamentals</span>
                         </div>
                     </div>
 
@@ -145,8 +144,8 @@
                         </div>
                         <div class="skill-items">
                             <span class="skill-item">Kali Linux</span>
-                            <span class="skill-item">Parrot OS</span>
-                            <span class="skill-item">Git & GitHub</span>
+                            <span class="skill-item">Git</span>
+                            <span class="skill-item">GitHub</span>
                             <span class="skill-item">Wireshark</span>
                             <span class="skill-item">Nmap</span>
                         </div>
@@ -303,10 +302,6 @@
                             vehicle tracking, slot availability monitoring, and accurate fee calculation.</p>
                     </div>
 
-                    <!-- Project 5 -->
-
-                    <!-- Project 6 -->
-
                 </div>
             </div>
         </section>
@@ -354,22 +349,6 @@
                             </ul>
                         </div>
                     </div>
-
-                    <!-- Experience Item 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">Jul 2025 - Jul 2025</span>
-                            <h3>Cyber Security Intern</h3>
-                            <h4>Codec Technology</h4>
-                            <ul>
-                                <li>Learned cybersecurity fundamentals and tools through guided projects.</li>
-                                <li>Conducted small-scale penetration testing and vulnerability assessments.</li>
-                                <li>Developed practical skills in securing systems and handling simulated threats.</li>
-                            </ul>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -516,7 +495,7 @@
                         </div>
                     </div>
 
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" data-endpoint="https://formspree.io/f/xykvrqyj">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Name</label>
@@ -528,13 +507,10 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="6" required></textarea>
                         </div>
+                        <div class="form-status" id="contactStatus" aria-live="polite"></div>
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
