@@ -1,285 +1,277 @@
 // ================================================
-// Aakash Portfolio
-// Minimal interactions for navigation, reveal, and contact
+// Aakash G — Portfolio
+// Theme, navigation, reveal, live status, contact form
 // ================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-    initNavigation();
-    initSmoothScroll();
-    initContactForm();
-    initScrollReveal();
+  initTheme();
+  initNav();
+  initSmoothScroll();
+  initClock();
+  initReveal();
+  initContactForm();
 });
 
-function initNavigation() {
-    const nav = document.getElementById("navbar");
-    const navToggle = document.getElementById("navToggle");
-    const navMenu = document.getElementById("navMenu");
-    const navLinks = Array.from(document.querySelectorAll(".nav-link"));
-    const sections = Array.from(document.querySelectorAll("header[id], section[id]"));
+/* ---------------- theme ---------------- */
+function initTheme() {
+  const root = document.documentElement;
+  const toggle = document.getElementById("themeToggle");
+  const stored = safeGet("theme");
+  const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
 
-    if (!nav || !navMenu) return;
+  const initial = stored || (prefersLight ? "light" : "dark");
+  root.setAttribute("data-theme", initial);
 
-    const closeMenu = () => {
-        navMenu.classList.remove("active");
-        document.body.classList.remove("menu-open");
+  if (!toggle) return;
 
-        if (navToggle) {
-            navToggle.classList.remove("active");
-            navToggle.setAttribute("aria-expanded", "false");
-        }
-    };
-
-    const openMenu = () => {
-        navMenu.classList.add("active");
-        document.body.classList.add("menu-open");
-
-        if (navToggle) {
-            navToggle.classList.add("active");
-            navToggle.setAttribute("aria-expanded", "true");
-        }
-    };
-
-    if (navToggle) {
-        navToggle.addEventListener("click", () => {
-            const isOpen = navMenu.classList.contains("active");
-            isOpen ? closeMenu() : openMenu();
-        });
-    }
-
-    document.addEventListener("click", (event) => {
-        if (!nav.contains(event.target) && navMenu.classList.contains("active")) {
-            closeMenu();
-        }
-    });
-
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-            closeMenu();
-        }
-    });
-
-    navLinks.forEach((link) => {
-        link.addEventListener("click", closeMenu);
-    });
-
-    const updateNavSurface = () => {
-        nav.classList.toggle("nav-scrolled", window.scrollY > 12);
-    };
-
-    const updateActiveLink = () => {
-        const scrollPosition = window.scrollY + nav.offsetHeight + 96;
-        let activeId = sections[0]?.id || "";
-
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            const sectionBottom = sectionTop + section.offsetHeight;
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                activeId = section.id;
-            }
-        });
-
-        navLinks.forEach((link) => {
-            link.classList.toggle("active", link.getAttribute("href") === `#${activeId}`);
-        });
-    };
-
-    let ticking = false;
-
-    const onScroll = () => {
-        if (ticking) return;
-
-        window.requestAnimationFrame(() => {
-            updateNavSurface();
-            updateActiveLink();
-            ticking = false;
-        });
-
-        ticking = true;
-    };
-
-    updateNavSurface();
-    updateActiveLink();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", updateActiveLink);
+  toggle.addEventListener("click", () => {
+    const current = root.getAttribute("data-theme") === "light" ? "light" : "dark";
+    const next = current === "light" ? "dark" : "light";
+    root.setAttribute("data-theme", next);
+    safeSet("theme", next);
+  });
 }
 
+function safeGet(key) {
+  try {
+    return window.localStorage.getItem(key);
+  } catch (e) {
+    return null;
+  }
+}
+
+function safeSet(key, value) {
+  try {
+    window.localStorage.setItem(key, value);
+  } catch (e) {
+    /* storage unavailable — theme just won't persist */
+  }
+}
+
+/* ---------------- navigation ---------------- */
+function initNav() {
+  const nav = document.getElementById("navbar");
+  const toggle = document.getElementById("navToggle");
+  const links = Array.from(document.querySelectorAll(".nav-link"));
+  const sections = Array.from(document.querySelectorAll("section[id], header[id]"));
+
+  if (!nav) return;
+
+  const closeMenu = () => {
+    nav.classList.remove("mobile-open");
+    document.body.classList.remove("no-scroll");
+    if (toggle) {
+      toggle.classList.remove("active");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+  };
+
+  const openMenu = () => {
+    nav.classList.add("mobile-open");
+    document.body.classList.add("no-scroll");
+    if (toggle) {
+      toggle.classList.add("active");
+      toggle.setAttribute("aria-expanded", "true");
+    }
+  };
+
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      nav.classList.contains("mobile-open") ? closeMenu() : openMenu();
+    });
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+
+  links.forEach((link) => link.addEventListener("click", closeMenu));
+
+  const updateSurface = () => {
+    nav.classList.toggle("is-scrolled", window.scrollY > 8);
+  };
+
+  const updateActive = () => {
+    const offset = nav.offsetHeight + 60;
+    const pos = window.scrollY + offset;
+    let activeId = sections[0]?.id || "";
+
+    sections.forEach((section) => {
+      if (pos >= section.offsetTop) activeId = section.id;
+    });
+
+    links.forEach((link) => {
+      link.classList.toggle("active", link.getAttribute("href") === `#${activeId}`);
+    });
+  };
+
+  let ticking = false;
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        updateSurface();
+        updateActive();
+        ticking = false;
+      });
+    },
+    { passive: true }
+  );
+
+  updateSurface();
+  updateActive();
+}
+
+/* ---------------- smooth scroll ---------------- */
 function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", (event) => {
-            const targetId = anchor.getAttribute("href");
-
-            if (!targetId || targetId === "#") return;
-
-            const target = document.querySelector(targetId);
-            if (!target) return;
-
-            event.preventDefault();
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-        });
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", (e) => {
+      const id = anchor.getAttribute("href");
+      if (!id || id === "#") return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
+  });
 }
 
+/* ---------------- status-strip clock ---------------- */
+function initClock() {
+  const el = document.getElementById("localTime");
+  if (!el) return;
+
+  const update = () => {
+    const now = new Date();
+    const formatted = now.toLocaleTimeString("en-IN", {
+      hour: "2-digit",
+      minute: "2-digit",
+      timeZone: "Asia/Kolkata"
+    });
+    el.textContent = `${formatted} IST`;
+  };
+
+  update();
+  window.setInterval(update, 30000);
+}
+
+/* ---------------- scroll reveal ---------------- */
+function initReveal() {
+  const items = document.querySelectorAll(".reveal");
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+    items.forEach((el) => el.classList.add("in"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("in");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  items.forEach((el) => observer.observe(el));
+}
+
+/* ---------------- contact form ---------------- */
 function initContactForm() {
-    const contactForm = document.getElementById("contactForm");
-    if (!contactForm) return;
+  const form = document.getElementById("contactForm");
+  if (!form) return;
 
-    contactForm.addEventListener("submit", (event) => {
-        event.preventDefault();
+  const statusEl = document.getElementById("contactStatus");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        const subjectEl = document.getElementById("subject");
-        const formData = {
-            name: document.getElementById("name").value.trim(),
-            email: document.getElementById("email").value.trim(),
-            subject: subjectEl ? subjectEl.value.trim() : "",
-            message: document.getElementById("message").value.trim()
-        };
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-        if (!validateForm(formData)) {
-            showNotification("Please complete every field with valid details.", "error");
-            return;
-        }
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const data = {
+      name: document.getElementById("name").value.trim(),
+      email: document.getElementById("email").value.trim(),
+      message: document.getElementById("message").value.trim()
+    };
 
-        const statusEl = document.getElementById("contactStatus");
+    const valid = data.name.length >= 2 && emailRegex.test(data.email) && data.message.length >= 10;
 
-        if (submitButton) {
-            submitButton.disabled = true;
-        }
-
-        const endpoint = (contactForm.dataset.endpoint || "").trim();
-
-        if (endpoint) {
-            // Send via provided endpoint (e.g., Formspree). Expect JSON response or 2xx status.
-            fetch(endpoint, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData)
-            })
-                .then((res) => {
-                    if (res.ok) {
-                        const successMsg = "Message sent — thank you!";
-                        showNotification(successMsg, "success");
-                        if (statusEl) statusEl.textContent = successMsg;
-                        contactForm.reset();
-                    } else {
-                        const errMsg = "Failed to send message. Please try again.";
-                        showNotification(errMsg, "error");
-                        if (statusEl) statusEl.textContent = errMsg;
-                    }
-                })
-                .catch((err) => {
-                    console.error(err);
-                    const netMsg = "Network error. Please try again later.";
-                    showNotification(netMsg, "error");
-                    if (statusEl) statusEl.textContent = netMsg;
-                })
-                .finally(() => {
-                    if (submitButton) submitButton.disabled = false;
-                });
-
-            return;
-        }
-
-        // Fallback: open user's email client with prefilled content
-        const subject = encodeURIComponent(`${formData.subject} - Portfolio inquiry from ${formData.name}`);
-        const body = encodeURIComponent(
-            `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
-        );
-
-        window.location.href = `mailto:aakashvkl4@email.com?subject=${subject}&body=${body}`;
-        const openingMsg = "Opening your email app with the message ready.";
-        showNotification(openingMsg, "success");
-        if (statusEl) statusEl.textContent = openingMsg;
-
-        window.setTimeout(() => {
-            if (submitButton) {
-                submitButton.disabled = false;
-            }
-        }, 900);
-    });
-}
-
-function validateForm(data) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    // Subject is optional; if present it must be at least 3 chars.
-    const subjectOk = data.subject.length === 0 || data.subject.length >= 3;
-
-    return (
-        data.name.length >= 2 &&
-        emailRegex.test(data.email) &&
-        subjectOk &&
-        data.message.length >= 10
-    );
-}
-
-function showNotification(message, type = "success") {
-    const existingNotification = document.querySelector(".notification");
-
-    if (existingNotification) {
-        existingNotification.remove();
+    if (!valid) {
+      const msg = "Please fill in every field with valid details.";
+      setStatus(msg, "err");
+      notify(msg, "err");
+      return;
     }
 
-    const notification = document.createElement("div");
-    const icon = document.createElement("i");
-    const text = document.createElement("span");
+    const endpoint = (form.dataset.endpoint || "").trim();
+    if (submitBtn) submitBtn.disabled = true;
+    setStatus("Sending…", "");
 
-    notification.className = `notification notification-${type}`;
-    notification.setAttribute("role", "status");
-    notification.setAttribute("aria-live", "polite");
+    if (endpoint) {
+      fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      })
+        .then((res) => {
+          if (res.ok) {
+            const msg = "Message sent — thanks, I'll reply soon.";
+            setStatus(msg, "ok");
+            notify(msg, "ok");
+            form.reset();
+          } else {
+            const msg = "Something went wrong. Please try again.";
+            setStatus(msg, "err");
+            notify(msg, "err");
+          }
+        })
+        .catch(() => {
+          const msg = "Network error — please try again later.";
+          setStatus(msg, "err");
+          notify(msg, "err");
+        })
+        .finally(() => {
+          if (submitBtn) submitBtn.disabled = false;
+        });
+      return;
+    }
 
-    icon.className = `fas fa-${type === "success" ? "check-circle" : "exclamation-circle"}`;
-    icon.setAttribute("aria-hidden", "true");
-    text.textContent = message;
-
-    notification.append(icon, text);
-    document.body.appendChild(notification);
-
+    // fallback: open the user's email client
+    const subject = encodeURIComponent(`Portfolio inquiry from ${data.name}`);
+    const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`);
+    window.location.href = `mailto:aakashvkl4@email.com?subject=${subject}&body=${body}`;
+    const msg = "Opening your email app with the message ready.";
+    setStatus(msg, "ok");
+    notify(msg, "ok");
     window.setTimeout(() => {
-        notification.classList.add("is-leaving");
-        window.setTimeout(() => notification.remove(), 200);
-    }, 4200);
+      if (submitBtn) submitBtn.disabled = false;
+    }, 900);
+  });
+
+  function setStatus(msg, type) {
+    if (!statusEl) return;
+    statusEl.textContent = msg;
+  }
 }
 
-function initScrollReveal() {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const revealElements = document.querySelectorAll(`
-        .stat,
-        .skill-category,
-        .project-card,
-        .timeline-item,
-        .education-card,
-        .achievement-item,
-        .cert-item,
-        .contact-item,
-        .contact-form
-    `);
+function notify(message, type) {
+  const existing = document.querySelector(".notification");
+  if (existing) existing.remove();
 
-    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-        revealElements.forEach((element) => element.classList.add("is-visible"));
-        return;
-    }
+  const el = document.createElement("div");
+  el.className = `notification ${type === "ok" ? "ok" : type === "err" ? "err" : ""}`.trim();
+  el.setAttribute("role", "status");
+  el.setAttribute("aria-live", "polite");
+  el.textContent = message;
+  document.body.appendChild(el);
 
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (!entry.isIntersecting) return;
-
-                entry.target.classList.add("is-visible");
-                observer.unobserve(entry.target);
-            });
-        },
-        {
-            threshold: 0.14,
-            rootMargin: "0px 0px -48px 0px"
-        }
-    );
-
-    revealElements.forEach((element) => {
-        element.classList.add("reveal");
-        observer.observe(element);
-    });
+  window.setTimeout(() => {
+    el.classList.add("leave");
+    window.setTimeout(() => el.remove(), 200);
+  }, 4000);
 }
-
-console.info("Aakash portfolio loaded.");
