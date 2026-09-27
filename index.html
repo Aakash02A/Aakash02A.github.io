@@ -1,536 +1,595 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aakash G — Backend Software Developer (Java)</title>
-<meta name="description" content="Aakash G — final-year B.Tech AI & Data Science student building toward backend software development in Java. Strengthening core Java and DSA, learning Spring Boot, with a defensive security background.">
-<meta name="theme-color" content="#0A0D10">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aakash G — Java Backend Developer</title>
+    <meta
+      name="description"
+      content="Aakash G — Java Backend Developer specializing in secure APIs and scalable backend systems. Java, Spring Boot, SQL, REST APIs." />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<!-- Open Graph -->
-<meta property="og:title" content="Aakash G — Backend Software Developer (Java)">
-<meta property="og:description" content="Final-year AI & Data Science student focused on backend development in Java. Security is background, not the pitch.">
-<meta property="og:type" content="website">
+  <body>
+    <!-- SOCIAL BAR -->
+    <div class="social-bar">
+      <a href="https://github.com/Aakash02A" target="_blank" title="GitHub">
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/aakash02a/" target="_blank" title="LinkedIn">
+        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+      </a>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="styles.css">
+      <a href="https://leetcode.com/u/Aakash02A/" target="_blank" title="LeetCode" aria-label="LeetCode">
+        <i class="fa-brands fa-leetcode" aria-hidden="true"></i>
+      </a>
 
-<!-- JSON-LD for SEO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Aakash G",
-  "jobTitle": "Backend Software Developer (Java)",
-  "email": "mailto:aakashvkl4@email.com",
-  "url": "https://github.com/aakash02a",
-  "sameAs": [
-    "https://github.com/aakash02a",
-    "https://linkedin.com/in/aakash02a"
-  ]
-}
-</script>
-</head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
-
-<!-- ============ status strip — signature element ============ -->
-<div class="status-strip" role="presentation">
-  <div class="container">
-    <div class="status-item">
-      <span class="status-dot" aria-hidden="true"></span>
-      <span>STATUS: OPEN TO BACKEND / SDE ROLES</span>
+      <a href="mailto:aakashvkl4@gmail.com" title="Email">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+      </a>
     </div>
-    <div class="status-right">
-      <span class="status-hide-sm">TIRUPPUR, IN</span>
-      <span class="status-hide-sm" id="localTime">--:--</span>
-      <span>FINAL YEAR B.TECH</span>
-    </div>
-  </div>
-</div>
 
-<!-- ============ nav ============ -->
-<nav class="nav" id="navbar">
-  <div class="container nav-inner">
-    <a href="#home" class="brand"><span class="brand-caret">&gt;</span> aakash<span class="brand-caret">_</span></a>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about" class="nav-link">~/about</a></li>
-      <li><a href="#experience" class="nav-link">~/experience</a></li>
-      <li><a href="#projects" class="nav-link">~/projects</a></li>
-      <li><a href="#skills" class="nav-link">~/skills</a></li>
-      <li><a href="#security" class="nav-link">~/security-background</a></li>
-      <li><a href="#credentials" class="nav-link">~/credentials</a></li>
-      <li><a href="#contact" class="nav-link">~/contact</a></li>
-    </ul>
-
-    <div class="nav-actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-      </button>
-      <a href="resume.pdf" class="btn btn-ghost" download style="padding:.6rem .9rem; font-size:.85rem;">Resume</a>
-    </div>
-  </div>
-</nav>
-
-<main id="main">
-
-  <!-- ============ hero ============ -->
-  <header id="home" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <div class="hero-kicker mono"><span class="status-dot" aria-hidden="true"></span> OPEN TO BACKEND / SDE ROLES</div>
-        <h1 class="hero-name">Aakash G</h1>
-        <p class="hero-role">Backend-focused software engineer (Java) — final-year AI &amp; Data Science.</p>
-        <p class="hero-desc">I build reliable Java backend systems. Currently strengthening core Java, DSA, and SQL while learning Spring Boot; I also have practical defensive-security experience that informs my approach.</p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">View projects</a>
-          <a href="#contact" class="btn btn-ghost">Get in touch</a>
-        </div>
-        <div class="hero-links">
-          <a href="https://github.com/aakash02a" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.1c-3.16.69-3.83-1.36-3.83-1.36-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 5.72 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.18 5.59.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55 4.51-1.51 7.77-5.76 7.77-10.78C23.02 5.24 18.27.5 12 .5z"/></svg></a>
-          <a href="https://linkedin.com/in/aakash02a" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.11 20.45H3.56V9h3.55v11.45z"/></svg></a>
-          <a href="mailto:aakashvkl4@email.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#hero" class="wordmark">Aakash <span>G.</span></a>
+        <nav class="nav-links">
+          <a href="#hero" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-right">
+          <a href="assets/Aakash_Resume.pdf" target="_blank" class="btn-resume">Resume</a>
+          <button type="button" id="menu-btn" class="menu-btn" aria-label="Open menu" aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </header>
 
-      <div class="session-card reveal">
-        <div class="session-head">
-          <div class="session-dots"><span></span><span></span><span></span></div>
-          session.log
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-status"><span class="dot"></span> Open to SDE Opportunities</div>
+        <h1 class="hero-title">Java Backend<br />Developer</h1>
+        <p class="hero-sub">Specializing in Secure APIs &amp; Scalable Backend Systems</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-dark">View Work →</a>
+          <a href="#contact" class="btn-outline">Contact Me</a>
         </div>
-        <div class="session-body">
-          <div class="session-line ok" style="animation-delay:.1s"><span class="lbl">$</span><span class="val">whoami</span></div>
-          <div class="session-line" style="animation-delay:.3s"><span class="val">Aakash G — backend-focused SDE, final year</span></div>
-          <div class="session-line ok" style="animation-delay:.5s"><span class="lbl">$</span><span class="val">stack --working</span></div>
-          <div class="session-line tag" style="animation-delay:.7s"><span class="val">Java · SQL · Git</span></div>
-          <div class="session-line ok" style="animation-delay:.85s"><span class="lbl">$</span><span class="val">stack --learning</span></div>
-          <div class="session-line tag" style="animation-delay:1s"><span class="val">Data Structures &amp; Algorithms · Spring Boot</span></div>
-          <div class="session-line ok" style="animation-delay:1.2s"><span class="lbl">$</span><span class="val">status<span class="cursor" aria-hidden="true"></span></span></div>
+        <div class="hero-alert"><span class="dot"></span> Actively looking for SDE / Backend roles</div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container split">
+        <div class="split-text reveal-l">
+          <div class="eyebrow">
+            <span class="dash"></span>
+            About
+          </div>
+          <h2 class="h-display">Backend systems built with intent.</h2>
+          <p class="body-text">
+            I'm <strong>Aakash G</strong>, a backend-focused engineer with hands-on experience building multi-tiered and distributed systems
+            using Java, Python, MySQL, and modern web technologies.
+          </p>
+          <p class="body-text">
+            My work centers on object-oriented design, RESTful microservices architecture, relational database design, and high-quality
+            backend engineering grounded in data structures, algorithms, and complexity analysis.
+          </p>
+          <p class="body-text">
+            I enjoy building reliable systems in fast-paced environments, collaborating across teams, and turning complex workflows into
+            clean, scalable, production-ready backend solutions.
+          </p>
+        </div>
+        <div class="split-media reveal-img">
+          <figure class="frame frame-about">
+            <img src="assets/Aakash.png" alt="Aakash G" />
+          </figure>
         </div>
       </div>
-    </div>
-  </header>
+    </section>
 
-  <!-- ============ about ============ -->
-  <section id="about">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">ABOUT</span>
-        <h2 class="section-title">Who I am, honestly</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-copy">
-          <p>I'm a final-year B.Tech student in AI &amp; Data Science, and my primary goal right now is backend software development — roles like Software Engineer, Junior Java Developer, or Backend Developer. This isn't a dual identity; backend is the active focus, not one of two things I'm balancing.</p>
-          <p>I'm currently strengthening core Java and working through data structures &amp; algorithms for placement prep, alongside a working knowledge of SQL and being comfortable in Git day to day. I'm also learning Spring Boot from the ground up — I haven't shipped anything with it yet, so I'm not claiming it as an active skill until there's a real project to point to.</p>
-          <p>I apply what I'm learning in two places: a small repo of focused Core Java, JDBC, and Spring Boot implementations built one concept at a time as I learn it, and a full end-to-end backend project I'm holding off on until the fundamentals are solid enough to build it properly.</p>
-          <p>Longer term, I want to grow into a strong backend engineer. I also have a genuine, hands-on background in defensive security — logs, SIEM basics, SOC workflows — which stays a secondary interest and shows up honestly in its own section below, not blended into the main pitch.</p>
+    <div class="divider"></div>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">
+            <span class="dash"></span>
+            Experience
+          </div>
+          <h2 class="h-display">Where the work happened.</h2>
         </div>
-        <div class="focus-list">
-          <div class="focus-item">
-            <span class="k">PRIMARY TARGET</span>
-            <span class="v">Backend Software Developer (Java)</span>
-          </div>
-          <div class="focus-item">
-            <span class="k">WORKING WITH NOW</span>
-            <span class="v">Java, SQL, Git, DSA</span>
-          </div>
-          <div class="focus-item">
-            <span class="k">LEARNING</span>
-            <span class="v">Spring Boot, JDBC</span>
-          </div>
-          <div class="focus-item">
-            <span class="k">DEGREE</span>
-            <span class="v">B.Tech AI &amp; Data Science — MKCE, 2027</span>
-          </div>
-          <div class="focus-item">
-            <span class="k">BASED IN</span>
-            <span class="v">Tiruppur, Tamil Nadu, India</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ experience ============ -->
-  <section id="experience">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">EXPERIENCE</span>
-        <h2 class="section-title">Work log</h2>
-        <p class="section-desc">A short history — internship and program work, in reverse chronological order.</p>
-      </div>
-
-      <div class="log-list">
-        <div class="log-entry reveal">
-          <div class="log-time mono">AUG 2025 — APR 2026</div>
-          <div>
-            <h3 class="log-role">Software Developer Trainee</h3>
-            <div class="log-org">Technology Innovation Hub, MKCE</div>
-            <ul class="log-points">
-              <li>Selected for an intensive software development training program focused on application and backend development using PHP, MySQL, and RESTful APIs.</li>
-              <li>Developed backend functionality for a centralized Task Management System — task assignment, deadline monitoring, and progress tracking across departments.</li>
-              <li>Built role-based access control across four user roles (Chairman, HOD, Faculty, Staff), each with different functionality and data visibility.</li>
-              <li>Worked directly with database operations and application logic, and picked up real-world software development workflow through project-based learning.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="log-entry reveal">
-          <div class="log-time mono">JUL 2025</div>
-          <div>
-            <h3 class="log-role">Data Analyst Intern</h3>
-            <div class="log-org">LoomTex Exports</div>
-            <ul class="log-points">
-              <li>Cleaned and analyzed operational data from PPC, ERP, and HR departments using Excel, Power BI, and Python to improve reporting accuracy.</li>
-              <li>Built interactive dashboards tracking KPIs — order fulfillment, production delays, dispatch turnaround — to support data-driven decisions.</li>
-              <li>Mapped end-to-end textile production workflows, surfacing bottlenecks that fed directly into process changes.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ projects ============ -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">PROJECTS</span>
-        <h2 class="section-title">Currently building</h2>
-        <p class="section-desc">Backend fundamentals, learned and committed one piece at a time — not a finished portfolio piece yet, so it's labeled as what it is.</p>
-      </div>
-
-      <div class="projects-grid" style="margin-bottom: var(--s7);">
-        <article class="project-card reveal">
-          <div class="project-top">
-            <h3 class="project-title">Technology Playground <span class="tag" style="margin-left:.5rem;">IN PROGRESS</span></h3>
-            <a class="project-link" href="https://github.com/aakash02a" target="_blank" rel="noopener" aria-label="View GitHub profile">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.1c-3.16.69-3.83-1.36-3.83-1.36-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 5.72 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.18 5.59.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55 4.51-1.51 7.77-5.76 7.77-10.78C23.02 5.24 18.27.5 12 .5z"/></svg>
-            </a>
-          </div>
-          <p class="project-desc">A running repo of small, focused implementations — Core Java, JDBC, and Spring Boot basics, plus security fundamentals — added one concept at a time as I actually learn it. Not a single application; a record of what I can currently write and explain.</p>
-          <div class="project-tags">
-            <span class="tag">Core Java</span><span class="tag">JDBC</span><span class="tag">Spring Boot (learning)</span>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-top">
-            <h3 class="project-title">Java Backend Application <span class="tag" style="margin-left:.5rem;">PLANNED / IN PROGRESS</span></h3>
-          </div>
-          <p class="project-desc">A layered backend application I'm building to practice modern Java backend development properly — controller, service, and repository layers talking to a real database, with validation and exception handling done right rather than skipped. No public commits yet, so it isn't linked — this will replace this card with a repo link once there's real code behind it.</p>
-          <div class="project-tags">
-            <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">REST API</span><span class="tag">SQL</span>
-          </div>
-        </article>
-      </div>
-      <!-- UPDATE: replace the GitHub-profile link above with the direct repo URL once you share it. -->
-
-      <div class="section-head">
-        <span class="eyebrow">EARLIER BUILDS</span>
-        <h2 class="section-title">Shipped and complete</h2>
-        <p class="section-desc">Finished, working repos — some from the backend track, some from before it. Kept here because they're real and complete.</p>
-      </div>
-
-      <div class="projects-grid">
-
-        <article class="project-card reveal">
-          <div class="project-top">
-            <h3 class="project-title">Task Management System</h3>
-          </div>
-          <p class="project-desc">A centralized web-based system for managing task assignment, deadlines, progress tracking, and departmental activity — built during my traineeship at Technology Innovation Hub, MKCE. I worked on the backend: database operations and application logic.</p>
-          <div class="project-tags">
-            <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">REST APIs</span><span class="tag">RBAC</span>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-top">
-            <h3 class="project-title">Java Student Management System</h3>
-          </div>
-          <p class="project-desc">A Java application built specifically to strengthen OOP fundamentals — classes, constructors, encapsulation, and managing collections of objects with ArrayList, including searching and updating records.</p>
-          <div class="project-tags">
-            <span class="tag">Java</span><span class="tag">OOP</span><span class="tag">ArrayList</span>
-          </div>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-top">
-            <h3 class="project-title">Cryptography Algorithm Suite</h3>
-            <a class="project-link" href="https://github.com/Aakash02A/Cryptography-Algorithm" target="_blank" rel="noopener" aria-label="View source on GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.1c-3.16.69-3.83-1.36-3.83-1.36-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 5.72 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.18 5.59.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55 4.51-1.51 7.77-5.76 7.77-10.78C23.02 5.24 18.27.5 12 .5z"/></svg>
-            </a>
-          </div>
-          <p class="project-desc">Implemented a set of classical and modern cryptographic algorithms from first principles to understand encryption, decryption, and cipher-design trade-offs beyond using a library.</p>
-          <div class="project-tags">
-            <span class="tag">Python</span><span class="tag">Cryptography</span><span class="tag">Security Fundamentals</span>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-top">
-            <h3 class="project-title">E-Commerce Customer Segmentation Dashboard</h3>
-            <a class="project-link" href="https://github.com/Aakash02A/E-Commerce-Customer-Segmentation-Dashboard" target="_blank" rel="noopener" aria-label="View source on GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.1c-3.16.69-3.83-1.36-3.83-1.36-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 5.72 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.18 5.59.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55 4.51-1.51 7.77-5.76 7.77-10.78C23.02 5.24 18.27.5 12 .5z"/></svg>
-            </a>
-          </div>
-          <p class="project-desc">A data analytics dashboard that segments e-commerce customers by purchasing behavior, turning raw transaction data into visual, interpretable groups for targeting decisions.</p>
-          <div class="project-tags">
-            <span class="tag">Python</span><span class="tag">Data Analysis</span><span class="tag">Visualization</span>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-top">
-            <h3 class="project-title">ScienceLab Inventory Management System</h3>
-            <a class="project-link" href="https://github.com/Aakash02A/ScienceLab-Inventory-Management-System" target="_blank" rel="noopener" aria-label="View source on GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.1c-3.16.69-3.83-1.36-3.83-1.36-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 5.72 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.18 5.59.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55 4.51-1.51 7.77-5.76 7.77-10.78C23.02 5.24 18.27.5 12 .5z"/></svg>
-            </a>
-          </div>
-          <p class="project-desc">A centralized inventory system for laboratory chemicals, equipment, and consumables across multiple lab locations — stock tracking, equipment management, and role-based access across four user types.</p>
-          <div class="project-tags">
-            <span class="tag">Java</span><span class="tag">MySQL</span><span class="tag">RBAC</span>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-top">
-            <h3 class="project-title">Parking Management System</h3>
-            <a class="project-link" href="https://github.com/Aakash02A/Parking-Management-System" target="_blank" rel="noopener" aria-label="View source on GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.1c-3.16.69-3.83-1.36-3.83-1.36-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 5.72 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.18 5.59.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55 4.51-1.51 7.77-5.76 7.77-10.78C23.02 5.24 18.27.5 12 .5z"/></svg>
-            </a>
-          </div>
-          <p class="project-desc">Manages parking lot operations end to end — vehicle entry and exit tracking, slot availability, and automated fee calculation.</p>
-          <div class="project-tags">
-            <span class="tag">Java</span><span class="tag">System Design</span>
-          </div>
-        </article>
-
-      </div>
-      <!-- UPDATE: swap in newer projects here as you build them — keep the same card markup. -->
-    </div>
-  </section>
-
-  <!-- ============ skills ============ -->
-  <section id="skills">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">SKILLS</span>
-        <h2 class="section-title">Toolset, honestly leveled</h2>
-        <p class="section-desc">Split by how solid each one actually is — not everything I've touched belongs in the same tier as what I can write live.</p>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-card reveal">
-          <h3>WORKING NOW</h3>
-          <div class="skill-tags">
-            <span>Java</span><span>SQL</span><span>Data Structures &amp; Algorithms</span><span>OOP</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <h3>CURRENTLY LEARNING</h3>
-          <div class="skill-tags">
-            <span>Spring Boot</span><span>REST APIs</span><span>JDBC</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <h3>TOOLS</h3>
-          <div class="skill-tags">
-            <span>Git</span><span>GitHub</span><span>IntelliJ IDEA</span><span>VS Code</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <h3>DATABASES</h3>
-          <div class="skill-tags">
-            <span>MySQL</span><span>PostgreSQL</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <h3>WEB FUNDAMENTALS</h3>
-          <div class="skill-tags">
-            <span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>JavaScript</span><span>PHP</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <h3>SECURITY BACKGROUND</h3>
-          <div class="skill-tags">
-            <span>Python</span><span>Linux</span><span>Wireshark</span><span>Nmap</span>
-          </div>
-        </div>
-        <div class="skill-card reveal">
-          <h3>DATA &amp; ANALYSIS</h3>
-          <div class="skill-tags">
-            <span>Excel</span><span>Power BI</span><span>Pandas</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ security background ============ -->
-  <section id="security">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">BACKGROUND, NOT THE PITCH</span>
-        <h2 class="section-title">Security background</h2>
-        <p class="section-desc">Real, hands-on work — Linux, log analysis, SIEM fundamentals, SOC workflow basics. It's context for how I think about systems, kept here as its own section rather than mixed into the backend story above.</p>
-      </div>
-
-      <div class="project-card reveal" style="max-width: 760px;">
-        <div class="project-top">
-          <h3 class="project-title">Hybrid Network Intrusion Detection System</h3>
-        </div>
-        <p class="project-desc">A rule-based and ML-driven NIDS for securing networks — analyzes live traffic and .pcap files, flags anomalies with Random Forest, XGBoost, and autoencoders, raises real-time alerts, and visualizes activity on a dashboard.</p>
-        <div class="project-tags">
-          <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">XGBoost</span>
-          <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Streamlit</span>
-          <span class="tag">Scapy</span><span class="tag">Pyshark</span>
-        </div>
-      </div>
-      <!-- UPDATE: add the GitHub link for the NIDS project here once you share it. -->
-
-      <p class="section-desc" style="margin-top: var(--s6);">Cloud security and security engineering remain a long-term interest — secondary to the backend goal above, not competing with it.</p>
-    </div>
-  </section>
-
-  <!-- ============ credentials ============ -->
-  <section id="credentials">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">CREDENTIALS</span>
-        <h2 class="section-title">Education, certifications &amp; achievements</h2>
-      </div>
-
-      <div class="edu-card reveal">
-        <span class="cred-date mono">EXPECTED GRADUATION — MAY 2027</span>
-        <h4>B.Tech, Artificial Intelligence &amp; Data Science</h4>
-        <p>M Kumarasamy College of Engineering</p>
-        <div class="edu-gpa">GPA 7.8 / 10</div>
-        <div class="project-tags" style="margin-top: var(--s4);">
-          <span class="tag">OOP</span><span class="tag">Data Structures</span><span class="tag">DBMS</span>
-          <span class="tag">Software Engineering</span><span class="tag">Operating Systems</span><span class="tag">Computer Networks</span>
-        </div>
-      </div>
-
-      <div class="cred-grid">
-        <div class="cred-col reveal">
-          <h3>Certifications</h3>
-          <div class="cred-item">
-            <div><span class="cred-name">Java Certification</span><br><span class="cred-org">HackerRank</span></div>
-            <span class="cred-date mono">—</span>
-          </div>
-          <div class="cred-item">
-            <div><span class="cred-name">API Hacking Expert</span><br><span class="cred-org">Udemy</span></div>
-            <span class="cred-date mono">2026</span>
-          </div>
-          <div class="cred-item">
-            <div><span class="cred-name">Ethical Hacking</span><br><span class="cred-org">NPTEL</span></div>
-            <span class="cred-date mono">2025</span>
-          </div>
-          <div class="cred-item">
-            <div><span class="cred-name">Business Intelligence</span><br><span class="cred-org">IBM</span></div>
-            <span class="cred-date mono">2025</span>
-          </div>
-          <div class="cred-item">
-            <div><span class="cred-name">Cybersecurity Analyst Job Simulation</span><br><span class="cred-org">Forage</span></div>
-            <span class="cred-date mono">2024</span>
-          </div>
-        </div>
-
-        <div class="cred-col reveal">
-          <h3>Achievements</h3>
-          <div class="cred-item">
-            <div><span class="cred-name">IEEE Paper Publication</span></div>
-            <span class="cred-date mono">DEC 2025</span>
-          </div>
-          <div class="cred-item">
-            <div><span class="cred-name">University Hackathon</span></div>
-            <span class="cred-date mono">OCT 2025</span>
-          </div>
-          <div class="cred-item">
-            <div><span class="cred-name">Paper Presentation</span></div>
-            <span class="cred-date mono">FEB 2025</span>
-          </div>
-          <!-- UPDATE: add publication/repo link for the IEEE paper here once available -->
-          <!-- UPDATE: add the completion date and certificate link for the HackerRank Java Certification -->
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ contact ============ -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">CONTACT</span>
-        <h2 class="section-title">Let's talk</h2>
-        <p class="section-desc">Open to backend / SDE roles, internships, and conversations about Java development. I reply within a couple of days.</p>
-      </div>
-
-      <div class="contact-wrap">
-        <div class="contact-info">
-          <div class="contact-row reveal">
-            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
-            <div><span class="lbl mono">EMAIL</span><a href="mailto:aakashvkl4@email.com">aakashvkl4@email.com</a></div>
-          </div>
-          <div class="contact-row reveal">
-            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7.9 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2.1z"/></svg></span>
-            <div><span class="lbl mono">PHONE</span><a href="tel:+919442689804">+91 94426 89804</a></div>
-          </div>
-          <div class="contact-row reveal">
-            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <div><span class="lbl mono">LOCATION</span><span class="val">Tiruppur, Tamil Nadu, India</span></div>
-          </div>
-          <div class="contact-row reveal">
-            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
-            <div><span class="lbl mono">RESUME</span><a href="resume.pdf" download>Download PDF</a></div>
-          </div>
-
-          <div class="hero-links" style="margin-top:.5rem;">
-            <a href="https://github.com/aakash02a" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.1c-3.16.69-3.83-1.36-3.83-1.36-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.73.4-1.24.72-1.53-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 5.72 0c2.18-1.47 3.14-1.16 3.14-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.18 5.59.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55 4.51-1.51 7.77-5.76 7.77-10.78C23.02 5.24 18.27.5 12 .5z"/></svg></a>
-            <a href="https://linkedin.com/in/aakash02a" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.11 20.45H3.56V9h3.55v11.45z"/></svg></a>
-            <a href="https://twitter.com/aakash02a" target="_blank" rel="noopener" aria-label="Twitter / X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.8l-5.3-6.9L4.7 22H1.5l8.1-9.3L1 2h7l4.8 6.3L18.9 2zM17.6 20h1.9L7.5 3.9H5.4L17.6 20z"/></svg></a>
-            <a href="https://leetcode.com/aakash02a" target="_blank" rel="noopener" aria-label="LeetCode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 4l-8 8 8 8M3 12h13"/></svg></a>
-          </div>
-        </div>
-
-        <form class="form-card" id="contactForm" data-endpoint="https://formspree.io/f/xykvrqyj">
-          <div class="form-row">
-            <div class="field">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required autocomplete="name">
+        <div class="rows">
+          <div class="row reveal">
+            <span class="row-period">Apprenticeship</span>
+            <div class="row-body">
+              <h3 class="row-title">Full-Stack Development Apprentice</h3>
+              <p class="row-sub">Technology Innovation Hub, MKCE</p>
+              <p class="row-duration">July 2025 - April 2026</p>
+              <ul class="row-points">
+                <li>
+                  Contributed to backend development, database operations, and REST API integration for a centralized task-management and
+                  college ERP platform using PHP and MySQL.
+                </li>
+                <li>
+                  Developed backend modules for task assignment, delegation, status tracking, deadlines, escalations, and role-based
+                  workflows.
+                </li>
+                <li>
+                  Collaborated on application development and database-driven features while gaining hands-on experience in backend
+                  architecture and software engineering practices.
+                </li>
+              </ul>
             </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required autocomplete="email">
+            <span class="row-loc">Karur, India</span>
+          </div>
+
+          <div class="row reveal d1">
+            <span class="row-period">Internship</span>
+            <div class="row-body">
+              <h3 class="row-title">Data Analytics Intern</h3>
+              <p class="row-sub">Loom Tex Exports</p>
+              <p class="row-duration">July 2025</p>
+              <ul class="row-points">
+                <li>Analyzed production and export data for a textile manufacturing company.</li>
+                <li>Built interactive dashboards and reports using Power BI and Excel.</li>
+                <li>Delivered data-driven insights that informed operational decisions.</li>
+              </ul>
+            </div>
+            <span class="row-loc">Karur, India</span>
+          </div>
+
+          <div class="row reveal d2">
+            <span class="row-period">Current</span>
+            <div class="row-body">
+              <h3 class="row-title">Independent Backend Engineer</h3>
+              <p class="row-sub">Open Source &amp; Personal Projects</p>
+              <ul class="row-points">
+                <li>Building modular, secure backend applications with Java, Python, Spring Boot, MySQL, and REST APIs.</li>
+                <li>
+                  Shipping projects focused on compliance workflows, task systems, AI-assisted decision support, and distributed service
+                  design.
+                </li>
+              </ul>
+            </div>
+            <span class="row-loc">Remote</span>
+          </div>
+
+          <div class="row reveal d2">
+            <span class="row-period">Learning</span>
+            <div class="row-body">
+              <h3 class="row-title">Security &amp; Systems Research</h3>
+              <p class="row-sub">AI, networking, and secure architecture</p>
+              <ul class="row-points">
+                <li>
+                  Exploring AI-assisted security workflows, firewall modeling, and backend security patterns using event-driven and stateful
+                  design principles.
+                </li>
+                <li>Building projects across networking, automation, and system-level design to strengthen practical engineering depth.</li>
+              </ul>
+            </div>
+            <span class="row-loc">Remote</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">
+            <span class="dash"></span>
+            Education
+          </div>
+          <h2 class="h-display">The foundation behind the work.</h2>
+        </div>
+        <div class="rows">
+          <div class="row reveal d3">
+            <span class="row-period">Degree</span>
+            <div class="row-body">
+              <h3 class="row-title">B.Tech in Artificial Intelligence and Data Science</h3>
+              <p class="row-sub">M. Kumarasamy College of Engineering · 2023 - 2027</p>
+              <ul class="row-points">
+                <li>Focused on backend systems, data-driven decision making, AI workflows, and full-stack engineering fundamentals.</li>
+                <li>CGPA: 7.84</li>
+              </ul>
+            </div>
+            <span class="row-loc">Karur, India</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head-row reveal">
+          <div>
+            <div class="eyebrow">
+              <span class="dash"></span>
+              Selected work
+            </div>
+            <h2 class="h-display">Things I've shipped.</h2>
+          </div>
+          <a href="https://github.com/Aakash02A" target="_blank" class="link-underline head-link">View all on GitHub</a>
+        </div>
+
+        <div class="reveal d1">
+          <div class="carousel" id="carousel">
+            <div class="project-card">
+              <div class="project-thumb">
+                <img src="assets/parking.jpg" alt="Parking Management System project screenshot" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <div class="project-header-row">
+                  <div class="project-title">Parking Management System</div>
+                  <a href="https://github.com/Aakash02A/Parking-Management-System" target="_blank" class="icon-link" title="GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <p class="project-desc">
+                  Console-based parking system in pure Java with OOP design — spot allocation, booking tracking, charge calculation, and
+                  admin controls for occupancy and earnings.
+                </p>
+                <div class="project-pills">
+                  <span class="p-pill">Java</span><span class="p-pill">OOP</span><span class="p-pill">Data Structures</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-thumb">
+                <img src="assets/Aegis-x.jpg" alt="Aegis-X project screenshot" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <div class="project-header-row">
+                  <div class="project-title">Aegis-X</div>
+                  <a href="https://github.com/Aakash02A" target="_blank" class="icon-link" title="GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <p class="project-desc">
+                  AI-assisted cross-border payment compliance and settlement orchestration responder built on Spring Boot with transaction
+                  validation, policy routing, and automated evidence handling.
+                </p>
+                <div class="project-pills">
+                  <span class="p-pill">Java 21</span><span class="p-pill">Spring Boot</span><span class="p-pill">PostgreSQL</span
+                  ><span class="p-pill">Razorpay</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-thumb">
+                <img src="assets/AI-Risk Manager.jpg" alt="AI Risk Manager project screenshot" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <div class="project-header-row">
+                  <div class="project-title">AI Risk Manager</div>
+                  <a href="https://github.com/Aakash02A/AI-Risk-Manager" target="_blank" class="icon-link" title="GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <p class="project-desc">
+                  AI-orchestrated dispute defense engine that plugs directly into Razorpay's payment dispute lifecycle — the Dispute Shield.
+                </p>
+                <div class="project-pills">
+                  <span class="p-pill">Java</span><span class="p-pill">MySQL</span><span class="p-pill">HTML5</span
+                  ><span class="p-pill">Bootstrap 5</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-thumb">
+                <img src="assets/Firewall.jpg" alt="AI Stateful Firewall project screenshot" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <div class="project-header-row">
+                  <div class="project-title">AI Stateful Firewall</div>
+                  <a
+                    href="https://github.com/Aakash02A/AI-Powered-Stateful-Personal-Firewall"
+                    target="_blank"
+                    class="icon-link"
+                    title="GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <p class="project-desc">
+                  Personal firewall with stateful packet inspection, rule-based intrusion detection, ML anomaly detection, and real-time
+                  monitoring.
+                </p>
+                <div class="project-pills">
+                  <span class="p-pill">Python</span><span class="p-pill">ML</span><span class="p-pill">Security</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-thumb">
+                <img src="assets/Cybersecurity.jpg" alt="SecOps Arsenal project screenshot" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <div class="project-header-row">
+                  <div class="project-title">SecOps Arsenal</div>
+                  <a href="https://github.com/Aakash02A/SecOps-Arsenal" target="_blank" class="icon-link" title="GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <p class="project-desc">
+                  A curated collection of practical cybersecurity tools for learning, defensive engineering, and authorized security
+                  research.
+                </p>
+                <div class="project-pills">
+                  <span class="p-pill">Python</span><span class="p-pill">Security Tools</span><span class="p-pill">Docker</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-thumb">
+                <img src="assets/cryptography.jpg" alt="Cryptography Algorithm Toolkit screenshot" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <div class="project-header-row">
+                  <div class="project-title">Cryptography Algorithm Toolkit</div>
+                  <a href="https://github.com/Aakash02A/Cryptography-Algorithm" target="_blank" class="icon-link" title="GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <p class="project-desc">
+                  An interactive Python CLI for exploring 80+ cryptographic algorithms, from classical ciphers to modern and post-quantum
+                  techniques.
+                </p>
+                <div class="project-pills">
+                  <span class="p-pill">Python</span><span class="p-pill">Cryptography</span><span class="p-pill">CLI</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-thumb">
+                <img src="assets/Network.jpg" alt="Networking Projects screenshot" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <div class="project-header-row">
+                  <div class="project-title">Networking Projects</div>
+                  <a href="https://github.com/Aakash02A/Networking-Projects" target="_blank" class="icon-link" title="GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <p class="project-desc">
+                  Hands-on Python tools for learning computer networking, including packet inspection, scanning, proxies, and protocol
+                  simulations.
+                </p>
+                <div class="project-pills">
+                  <span class="p-pill">Python</span><span class="p-pill">Networking</span><span class="p-pill">Docker</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+          <div class="carousel-dots" id="dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section-dim">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">
+            <span class="dash"></span>
+            Skills
           </div>
-          <div class="form-status mono" id="contactStatus" aria-live="polite"></div>
-          <button type="submit" class="btn btn-primary">Send message</button>
+          <h2 class="h-display">The tools I work with.</h2>
+          <p class="skills-intro">
+A practical overview of the technologies I use across backend development, security, databases, and tooling.          </p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3>01 — Programming</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+          <div class="skill-card reveal d1">
+            <h3>02 — Backend Engineering</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Spring Boot</span>
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">Microservices</span>
+              <span class="skill-tag">MVC</span>
+              <span class="skill-tag">JDBC</span>
+            </div>
+          </div>
+          <div class="skill-card reveal d2">
+            <h3>03 — Security &amp; Networking</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Networking</span>
+              <span class="skill-tag">Wireshark</span>
+              <span class="skill-tag">Nmap</span>
+              <span class="skill-tag">Firewall</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <h3>04 — Databases</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">MongoDB</span>
+            </div>
+          </div>
+          <div class="skill-card reveal d1">
+            <h3>05 — Web &amp; Frontend</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">Bootstrap 5</span>
+              <span class="skill-tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="skill-card reveal d2">
+            <h3>06 — Tools &amp; DevOps</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">Maven</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">IntelliJ IDEA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">
+            <span class="dash"></span>
+            Highlights
+          </div>
+          <h2 class="h-display">Worth noting.</h2>
+        </div>
+        <div class="ach-grid">
+          <div class="ach-card reveal">
+            <div class="ach-trophy">
+              <i class="fa-solid fa-award" aria-hidden="true"></i>
+            </div>
+            <div class="ach-title">IEEE Publication</div>
+            <div class="ach-desc">Predictive ERP Framework for the Textile Industry</div>
+          </div>
+          <div class="ach-card reveal d1">
+            <div class="ach-trophy">
+              <i class="fa-brands fa-java" aria-hidden="true"></i>
+            </div>
+            <div class="ach-title">Java &amp; Python Stack</div>
+            <div class="ach-desc">Built backend systems across Spring Boot, APIs, and MySQL-driven workflows</div>
+          </div>
+          <div class="ach-card reveal d2">
+            <div class="ach-trophy">
+              <i class="fa-solid fa-brain" aria-hidden="true"></i>
+            </div>
+            <div class="ach-title">AI + Backend Integration</div>
+            <div class="ach-desc">Worked with policy engines, automation, and AI-assisted decision workflows</div>
+          </div>
+          <div class="ach-card reveal d3">
+            <div class="ach-trophy">
+              <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+            </div>
+            <div class="ach-title">Production-Focused Delivery</div>
+            <div class="ach-desc">Built modular applications for real-world task, compliance, and ERP workflows</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container contact-grid">
+        <div class="contact-left reveal-l">
+          <h2 class="h-display">Let's work together.</h2>
+          <p class="contact-blurb">
+            Open to SDE internships, full-time backend roles, and exciting projects. If you're building something impactful — reach out.
+          </p>
+          <a href="mailto:aakashvkl4@gmail.com" class="contact-row">
+            <span class="contact-icon">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </span>
+            <span class="contact-value">aakashvkl4@gmail.com</span>
+          </a>
+          <div class="contact-row">
+            <span class="contact-icon">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            </span>
+            <span class="contact-value">India</span>
+          </div>
+          <div class="quote-box">
+            <blockquote>"Just someone who got curious about improving himself, a little more every day."</blockquote>
+            <cite>— Aakash G.</cite>
+          </div>
+        </div>
+        <form class="contact-form reveal-r" data-endpoint="https://formspree.io/f/xykvrqyj" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="cf-name">Name</label>
+            <input id="cf-name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="cf-msg">Message</label>
+            <textarea id="cf-msg" name="message" placeholder="Tell me about the opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn-pill btn-send">
+            <span class="btn-pill-label">Send message</span>
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          </button>
         </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-</main>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a href="#hero" class="f-wordmark">Aakash <span>G.</span></a>
+        <div class="footer-socials">
+          <a href="https://github.com/Aakash02A" target="_blank" title="GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/aakash02a/" target="_blank" title="LinkedIn">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:aakashvkl4@gmail.com" title="Email">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p class="footer-copy">© 2026 <span>Aakash G.</span> All rights reserved. · India</p>
+        <button type="button" id="back-to-top">Back to top ↑</button>
+      </div>
+    </footer>
 
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2026 Aakash G — Java · Backend Development · SQL · Spring Boot · DSA</p>
-    <a href="#home" class="back-top">back to top ↑</a>
-  </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
