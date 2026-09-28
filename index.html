@@ -550,15 +550,15 @@ A practical overview of the technologies I use across backend development, secur
         <form class="contact-form reveal-r" data-endpoint="https://formspree.io/f/xykvrqyj" onsubmit="handleSubmit(event)">
           <div class="form-group">
             <label for="cf-name">Name</label>
-            <input id="cf-name" name="name" type="text" placeholder="Your name" required />
+            <input id="cf-name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
           </div>
           <div class="form-group">
             <label for="cf-email">Email</label>
-            <input id="cf-email" name="email" type="email" placeholder="your@email.com" required />
+            <input id="cf-email" name="email" type="email" placeholder="your@email.com" autocomplete="email" required />
           </div>
           <div class="form-group">
             <label for="cf-msg">Message</label>
-            <textarea id="cf-msg" name="message" placeholder="Tell me about the opportunity..." required></textarea>
+            <textarea id="cf-msg" name="message" placeholder="Tell me about the opportunity..." autocomplete="off" required></textarea>
           </div>
           <button type="submit" class="btn-pill btn-send">
             <span class="btn-pill-label">Send message</span>
